@@ -26,8 +26,8 @@ export class GeneralService {
   	"message":message
   }
   console.log("This is service method general.service OBJ->>",obj);
-	//const url="http://localhost:4000/generalChats";
-  const url="http://192.168.252.186:4000/generalChats";
+	const url="http://localhost:4000/generalChats";
+  //const url="http://192.168.252.186:4000/generalChats";
     return this.http
     .post(url,obj) //calling the http function
     .map((res)=>res.json());
@@ -35,8 +35,8 @@ export class GeneralService {
    }
 
 saveCode(data){
-//const url="http://localhost:4000/generalChats";
-const url="http://192.168.252.186:4000/generalChats";
+const url="http://localhost:4000/generalChats";
+//const url="http://192.168.252.186:4000/generalChats";
     return this.http
     .post(url,data) //calling the http function
     .map((res)=>res.json());
@@ -44,8 +44,8 @@ const url="http://192.168.252.186:4000/generalChats";
 
 
 getCodeDatas():Observable<any>{
-     //const url="http://localhost:4000/generalChats";
-     const url="http://192.168.252.186:4000/generalChats";
+     const url="http://localhost:4000/generalChats";
+     //const url="http://192.168.252.186:4000/generalChats";
     return this.http
     .get(url) //calling the http function
     .map((res)=>{

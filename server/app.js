@@ -54,3 +54,5 @@ server.on('disconnect', function(id){
 })
 socket = socketio(server);
 new socketEvents(socket).socketConfig();
+
+module.exports=server;

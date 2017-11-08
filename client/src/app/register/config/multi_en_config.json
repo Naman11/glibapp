@@ -1,0 +1,27 @@
+{"register":{
+        "registerTitle":"Sign Up Form",
+       "registerHeading":"Account",
+        " er":"Email is required",
+        "registerPlaceholder" : "Full Name ",
+        "format":"Email format should be",
+        "required":"Name is required",
+        "joe":"joe@abc.com",
+        "ps":"Password is required",
+        "pp" : "Password",
+         "cp":"Confirm Password",
+         "match":" Passwords did not match",
+          "number":"Contact Number",
+          "digit":"Mobile should be 10digit",
+           "mobile":"Mobile is required",
+            "n":"Mobile number should be only numbers",
+        "pattern":"Only alphabetsallowed",
+         "number":"Contact Number",
+        "d":"Enter DOB",
+        "rb":"Register Here",
+        "allow":"Only alphabetsallowed",
+        "adress":"Email Adress",
+        "gender":"Gender"
+       
+        
+}
+}

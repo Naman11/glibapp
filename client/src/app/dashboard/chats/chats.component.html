@@ -1,0 +1,256 @@
+    <div class="box-header with-border container" >
+      <h3 id="videoHead" class="box-title">{{userName}}</h3> <i class="fa fa-circle" aria-hidden="true" id=fontAw></i>
+
+      <div class="box-tools pull-right">
+        <i class="fa fa-video-camera" aria-hidden="true" (click)="videoConnect()"></i>
+      </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <a href="javascript:void(0)"  *ngIf="flag"(click)="maxNav()" ><i class="fa fa-window-maximize" aria-hidden="true"></i>
+          </a> 
+          <a href="javascript:void(0)"  *ngIf="!flag" (click)="minNav()" ><i class="fa fa-window-minimize" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="javascript:void(0)" (click)="closeNav()"><i class="fa fa-times" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <app-video-call [videoFlag]="videoFlag"></app-video-call>
+    </div>
+
+    <!--  ========= Use any element to open the sidenav=========================== -->
+    <body id="main">
+      <div class="container-fluid message-thread" id="secondSec">
+        <div class="row bootstrap snippets">
+          <div class="col-md-12">
+            <!--============== DIRECT CHAT WARNING =============================-->
+            <div class=" direct-chat direct-chat-warning">
+              <div class="box-body">
+
+                <!--============ Conversations are loaded here ======================== -->
+                <!-- <div class="message-thread"> -->
+                <div class="direct-chat-messages " *ngFor="let message of messages">
+                  <!--================ Message. Default to the left========================= -->
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="direct-chat-message" *ngIf="!alignMessage(message.toUserId)">
+                          <div class="direct-chat-info clearfix">
+                            <span class="direct-chat-name pull-left">{{userName}}</span>
+
+                            <span *ngIf="message.timestamp;else other_content" class="direct-chat-timestamp pull-right">{{message.timestamp}}</span>
+
+                            <ng-template #other_content>
+
+                              <span class="direct-chat-timestamp pull-right">Just Now</span>
+                            </ng-template>
+
+                          </div>
+
+                          <!--========================== /.direct-chat-info =================================-->
+
+                          <img *ngIf="!selectedUserProfilePic" class="direct-chat-img"  src="https://bootdey.com/img/Content/user_1.jpg" alt="Message User Image">
+
+                          <img *ngIf="selectedUserProfilePic" id="profilePhoto" src="http://localhost:4000/profile_picture/{{selectedUserProfilePic}}" class="direct-chat-img" alt="Picture Not Set">
+
+                          <div class="direct-chat-text">
+
+                            <div class="container">
+
+                              {{message.message}}
+                              <youtube-player *ngIf='message.id' [videoId]="message.id" (ready)="savePlayer($event)"
+                              (change)="onStateChange($event)"
+                              ></youtube-player>
+
+                            </div>
+
+                            <div class="card" id="left" *ngIf='message.title' >
+                              <div class="vl">
+                               <div class="card-block" >
+                                <h4 class="card-title">{{message.title}}</h4>
+
+
+                                <div class="row">
+                                  <div class=" thumbnail " *ngIf='message.image'>
+                                    <img class="card-img-top"  src="{{message.image}}">
+                                  </div>
+                                  <div class="col-md-12" *ngIf='message.description'>
+                                   <p class="card-text">{{message.description}}</p>
+                                 </div>
+                               </div>
+
+
+                             </div>
+                           </div>
+
+                         </div>
+
+                         <!--============================ Displaying File Transfer Message================ -->
+                         <div *ngIf="message.file">
+                          <script>
+                           $('.carousel').carousel({
+                             interval: 3000
+                           })
+                         </script>
+                         <div id="faq">
+                           <div class="panel-group" >
+                             <div class="panel panel-default">
+                               <div class="panel-heading">
+                                 <h4 class="panel-title">
+                                   <div class="row">
+                                     <div>
+                                       <label>{{message.file.fileMIME}}</label>
+                                       <button type="button" class="btn btn-primary" data-dismiss="modal"  >
+                                         <a href="http://localhost:4000/file/{{message.file.filePath}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                       </button>
+                                     </div>
+                                   </div>
+                                 </h4>
+                               </div>
+
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+
+                     </div>
+                     <!--========================================== /.direct-chat-text================== -->
+                   </div>
+                 </div>
+                 <!-- =============================/.direct-chat-message=========================== -->
+                 <div class="col-md-4">
+                 </div>
+               </div>
+             </div>
+             <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                </div>
+                <!--================================ Message to the right========================== -->
+                <div class="col-md-8">
+                  <div class="direct-chat-message right" *ngIf="alignMessage(message.toUserId)">
+                    <div class="direct-chat-info clearfix">
+                      <span class="direct-chat-name pull-right">me</span>
+                      <span class="direct-chat-timestamp pull-left">{{message.timestamp}}</span>
+                    </div>
+                    <!--============================ /.direct-chat-info=============================== -->
+                    <img *ngIf="userProfilePic" id="profilePhoto" src="http://localhost:4000/profile_picture/{{userProfilePic}}" class="direct-chat-img" alt="Picture Not Set">
+                    <img *ngIf="!userProfilePic" class="direct-chat-img" src="https://bootdey.com/img/Content/user_2.jpg" alt="Message User Image">
+                    <div class="direct-chat-text">
+                      {{message.message}}
+                      <youtube-player *ngIf='message.id' [videoId]="message.id" (ready)="savePlayer($event)"
+                      (change)="onStateChange($event)"
+                      ></youtube-player>
+
+                      <div class="card" id="card" *ngIf='message.title' >
+                        <div class="vl">
+                          <div class="card-block" >
+                            <h4 class="card-title">{{message.title}}</h4>
+
+                            <div class="row">
+                              <div class="col-md-12" *ngIf='message.image'>
+                                <img class="card-img-top"  src="{{message.image}}">
+                              </div>
+                              <div class="col-md-12" *ngIf='message.description'>
+                                <p class="card-text">{{message.description}}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div *ngIf="message.file">
+                       <script>
+                         $('.carousel').carousel({
+                           interval: 3000
+                         })
+                       </script>
+                       <div id="faq">
+                         <div class="panel-group" >
+                           <div class="panel panel-default">
+                             <div class="panel-heading">
+                               <h4 class="panel-title">
+                                 <div class="row">
+                                  <div>
+                                   <label>{{message.file.fileMIME}}</label>
+                                   <!--     I HAVE TO DO WORK HERE -->
+                                   <button type="button" class="btn btn-primary" data-dismiss="modal"  >
+                                     <a href="http://localhost:4000/file/{{message.file.filePath}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                   </button>
+                                 </div>
+                               </div>
+                             </h4>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                 <!--============================= /.direct-chat-text========================== -->
+               </div>
+             </div>
+             <!--======================== /.direct-chat-message =============================-->
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- /.box-body -->
+   </div>
+   <div class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-10">
+          <form action="#" method="post">
+            <div class="input-group container-fluid">
+              <!--================== Default dropup button ===================================-->
+
+              <div class="btn-group dropup">
+                <button type="button" class="btn btn-secondary" id="send" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" >
+                    <label class="custom-file" id="customFile">
+                      <input type="file" name ="file" class="custom-file-input" id="file"  aria-describedby="fileHelp" accept=".png, .jpeg, .jpg, .mp3 , .mp4, .pdf, .txt" (change)="sendFileData()">
+                      <span class="custom-file-control form-control-file" >Upload File</span>
+                    </label></a>
+
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="fa fa-paperclip" aria-hidden="true"></i> Code Snippet</a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <a class="dropdown-item" href="#"><i class="fa fa-desktop" aria-hidden="true"></i> Your Computer</a>
+
+                    <!--============================ Dropdown menu links ============================-->
+                  </div>
+                </div>
+                <input type="text" name="message" placeholder="Type Message ..." class="form-control" [(ngModel)]="message" 
+
+                (keyup)="sendMessage($event)">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-warning btn-flat" id="send" (click)="sendMessageButton()">Send</button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--==================== /.box-footer===========================================-->
+  </div>
+  <!--/.direct-chat -->
+</div>
+</div>
+</body>
+<!--============================== Large modal================================== -->
+
+
+

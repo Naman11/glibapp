@@ -1,0 +1,48 @@
+
+<div class="container-fluid" id="second">
+ <div class="container-fluid" id="first">
+ <div class="row" >
+ <img src="../../assets/logo.png" alt="img src" style="width: 50px" style="height: 50px">
+
+    <a class="navbar-brand" id="app">GlibApp</a>
+ </div>
+ </div>
+ <div class="container-fluid" id="third">
+<div id="login">
+   
+   <!--    <div class="row"> -->
+          <div class="col-xs-12">
+              <!-- <div class="form-wrap"> -->
+                <h1>Enter Email Id</h1>
+                    <form role="form" (ngSubmit)="save(f.value, f.valid)" #f="ngForm" action="javascript:;" method="post" id="login-form" autocomplete="off">
+
+
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="abc@gmail.com"   
+                           [(ngModel)]="email"
+                           required
+                           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+                           #uemail="ngModel">
+                        </div>
+                        <div [hidden]="uemail.valid || (uemail.pristine && !f.submitted)"
+                        class="alert alert-danger">
+                        <div [hidden]="!uemail.hasError('required')">Email is required</div>
+                        <div [hidden]="!uemail.hasError('pattern')"> Email is required and format should be <i>john@doe.com</i></div>
+                       </div>
+
+
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" 
+                        (click)=verifyEmail(data) value="Submit">
+                    </form>
+              <!-- </div> -->
+        </div> <!-- /.col-xs-12 -->
+   <!--    </div> --> <!-- /.row -->
+    <!-- /.container -->
+</div>
+
+
+ </div>
+ </div>
+
+ 

@@ -1,0 +1,181 @@
+  {
+	"login":{
+		"loginHeader" : "login",
+		"emailPlaceholder" : "Email Address ",
+		"passwordPlaceholder" : "Password",
+		"emailRequired":"Email is Required",
+		"emailPattern":"Email format should be",
+		"email":"joe@abc.com",
+		"paswordRequired":"Password is required",
+		"loginButton":"Login",
+		"forgetPasswordButton":"Forget Password",
+		"registerButton":"Register",
+		"loginAlert":"email does not exist"
+},
+"register":{
+        "registerTitle":"Sign Up Form",
+       "registerHeading":"Account",
+        " er":"Email is required",
+        "registerPlaceholder" : "Full Name ",
+        "format":"Email format should be",
+        "required":"Name is required",
+        "joe":"joe@abc.com",
+        "ps":"Password is required",
+        "pp" : "Password",
+         "cp":"Confirm Password",
+         "match":" Passwords did not match",
+          "number":"Contact Number",
+          "digit":"Mobile should be 10digit",
+           "mobile":"Mobile is required",
+            "n":"Mobile number should be only numbers",
+        "pattern":"Only alphabetsallowed",
+         "number":"Contact Number",
+        "d":"Enter DOB",
+        "rb":"Register Here",
+        "allow":"Only alphabetsallowed",
+        "adress":"Email Adress"
+       
+        
+},
+"upload":{
+    "uploadButtonText": "Upload",
+    "downloadTemplateButtonText":"Download Template"
+  },
+
+
+"deleteUser" : {
+        "deleteUserHeader" : "Remove account",
+        "deleteUserPlaceholder" : "Email Address",
+         "emailRequired":"Email is Required",
+          "emailPattern":"Email format should be",
+          "email":"joe@abc.com",
+          "passwordPlaceholder" : "Password",
+          "passwordRequired":"Password is required",
+          "button":"Remove",
+          "deleteUserAlert":"Your account has been deleted"
+    },
+      "charts":{
+
+        "monthChart": "Month Chart",
+        "weekChart" :"Week & Category Chart",
+		"showGraphButton": "Show Graph",
+		"tableLabel" : "Data For Selected Time Period",
+        "totalBudget":"Total Budget",
+        "totalExpense":"Total Expense",
+        "topSpentLabel": "Top Spent Category",
+        "dashboard" : "Dashboard"
+
+    },
+    "account":{
+        "congratulations":"Congratulations!!",
+        "successAccountCreated":"Your Account has been created successfully1",
+        "ok":"OK!",
+        "resetPassword":"Reset Password",
+        "oldPassword":"Old Password",
+        "newPassword" : "New Password",
+        "confirmPassword":"Confirm Password",
+        "cancel":"Cancel",
+        "save" :"Save",
+        "email":"Email",
+        "account": "Account No.",
+        "addAccount":"Add Account",
+        "deleteAccount":"Delete Account",
+        "accountExists":"Account already exists",
+        "noAccountPresent" : "No account exists. Please add an account."
+    },
+    "dashboard":{
+      "addTransaction":"Add Transaction",
+      "transaction":"Transactions",
+      "reports":"Reports",
+      "addAccount":"Add Account",
+      "account":"Accounts",
+      "expenseManager":"Expense Manager",
+		"dashboardHeader":"Dashboard",
+		"categoryManager":"Category Manager",
+    "budget":"Budget",
+		"addcategory":"Add Categories",
+		"cardManager":"Card Manager",
+		"createAccount":"Create Account",
+		"delete":" Delete",
+		"help":"Help",
+		"signout":"Signout",
+		"skip":"Skip",
+    "resetPassword":"Reset Password"
+
+	},
+  "reset":{
+"oldPassword":"Old Password",
+"newPassword":"New Password",
+"confirmPassword":"Confirm Password",
+"button":"Reset Password"
+  },
+  "addCategory" : {
+        "category" : "Category",
+        "budget" : "Budget",
+        "spent" : "Spent"
+    },
+     "cardSetting":{
+      "addCategory" : "Add Category",
+      "category" : "Category",
+      "required_Category" : "Category is required",
+      "onlyAlphabets" : "Only alphabets are allowed",
+      "budget": "Budget",
+      "budgetRequired":"budget is required",
+      "numbersAllowed": "Only numbers are allowed",
+      "spent" : "Spent",
+      "spentRequired" : "spent is required",
+      "update" : "Update",
+      "save" : "Save",
+      "categoryDetails" : "Category Details",
+      "addCategory" : "+Add Category"   
+     },
+     "cardManager":{
+        "cardDetails":"Card Details",
+        "cardNo" : "Card number",
+        "cardHolder":"Card holder",
+        "cvv":"CVV",
+        "expDate":"Exp-date",
+        "cancel":"Cancel",
+        "save":"Save",
+        "savedCard":"SAVED CARDS",
+        "addCard":"  +Add Card",
+        "minLenErr":"cardNo should be 16 digit",
+        "reqErr":"cardNo is required",
+        "reqNoOnly":"cardNo number should be only numbers",
+        "reqHolder":"Holdername is required",
+        "reqAlpha":"Only alphabets allowed",
+        "reqMinCvv":"cvvnumber should be 3 digit",
+        "reqCvv":"cvvnumber is required",
+        "reqCvvPat":"cvvnumber number should be only numbers"
+    },
+    "creditCard":{
+        "cardNo":"Card Number",
+        "expDate":"Expiry Date",
+        "holderName":"Holder Name",
+        "tracking":"Tracking:"
+    },
+    "categories":{
+
+      "addCategory":"Add Category",
+      "category":"Category",
+      "categoryDetails":"Category Details",
+      "addCategories":"+Add Category",
+      "category":"Category",
+      "save":"Save",
+      "budget":"Budget"
+    },
+    "forgetPass":{
+     "forgetPassHeader" : "Forget Password",
+     "placeholder" : "Email Address",
+     "button" : "Submit"
+   },
+
+   "setPassword" : {
+     "header" : "New Password",
+     "passwordPlaceholder" : "Password",
+     "button" : "Submit",
+     "confirmPasswordPlaceholder" : "Confirm Password"
+   }
+
+}
+

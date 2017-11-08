@@ -1,0 +1,33 @@
+{
+ "emailDoesntExist" : {
+  "message":"Email doesnt exist"
+},
+"dataotp" : {
+  "Email" : "prernathanai@gmail.com"
+},
+"mockResponse" : {
+  "result":{"email":"prernathanai@gmail.com"}
+},
+"data" : {
+  "email":"prernathanai@gmail.com"
+},
+"dataNegative" : {
+  "Email":"prernathanai12@gmail.com"
+},
+"mockResponseMail": {
+  "ok":"200",
+  "status":"true",
+  "statusText":"OK"
+},
+"mailData": {
+  "ok":"200",
+  "status":"false",
+  "statusText":"OK"
+},
+"subject":{
+  "message":"Budget Overshoot Alert"
+},
+"component":{
+  "message":"dashboard"
+}
+}

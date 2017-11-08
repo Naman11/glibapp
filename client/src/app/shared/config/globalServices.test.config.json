@@ -1,0 +1,101 @@
+ { 
+    "getInfoService":{
+                        "mockResponsePositive" : {
+                              
+                                                "error": false,
+                                                "result": {
+                                                    "_id": "5a002b51669d3f352d253b02",
+                                                    "username": "vismita",
+                                                    "email": "vismi.25@gmail.com",
+                                                    "password": "vismita",
+                                                    "timestamp": 1509960529,
+                                                    "online": "N",
+                                                    "socketId": "ISkbbA2xdIw39J1iAAAc",
+                                                    "profilePhoto": "5a002b51669d3f352d253b02-1509960563742.png"
+                                                },
+                                                "message": "Query Complete"
+                            },
+                            "mockResponseNegativeUNF" : {
+                              
+                                                "error": true,
+                                                "message": "User Not Found."
+                            },
+                            "mockResponseNegative" : {
+                              
+                                                "error": true,
+                                                "message": "Server error."
+                            },
+                            "id":"5a002b51669d3f352d253b09"
+      },
+    "fileTransferGlobalService":{
+
+                        "mockResponsePositiveOneOne" : {
+                              
+                                                "error":false,
+                                                "message":"File Uploaded to  Messages Collection",
+                                                "response":
+                                                        {
+                                                            "finalData":
+                                                            {
+                                                                "file":
+                                                                {
+                                                                    "filePath": "file-5a002b2b669d3f352d253b01-1510030232758.mp3", 
+                                                                    "fileMIME": "audio/mp3"
+                                                                },
+                                                                "fromUserId":"5a002b2b669d3f352d253b01",
+                                                                "timestamp":1510030232804,
+                                                                "toUserId":"5a002ca3669d3f352d253b10"
+                                                            }
+                                                        }
+                            },
+
+                        "mockResponsePositiveGeneral" : {
+                              
+                                                "error":false,
+                                                "message":"File Uploaded to General Collection",
+                                                "response":
+                                                        {
+                                                            "finalData":
+                                                            {
+                                                                "file":
+                                                                {
+                                                                    "filePath": "file-vismita-1510030735935.txt", 
+                                                                    "fileMIME": "text/plain"
+                                                                },
+                                                                "timestamp":1510030735937,
+                                                                "username":"vismita",
+                                                                "_id":"5a013d8f033a3b16bb3b67c8"
+                                                            },
+                                                            "status":
+                                                            {
+                                                                "ok": 1, 
+                                                                "n": 1
+                                                            }
+                                                        }    
+                            }
+
+      },
+    "mailotpService":{
+                        "sendMailPositive": {"message":"OTP Sent"},
+                        "sendMailNegative": {"message":"OTP not Sent"},
+                        "verifyOTPPositive":{"message":true},
+                        "verifyOTPNegative":{"message":false}
+
+    },
+    "registerService":{
+                        "mockResponsePositive":
+                                            {
+                                             "ConfirmPassword":"laxman",
+                                             "Contact":"9999999999",
+                                             "DOB":"2017-09-14",
+                                             "Email":"vismi.25@gmail.com",
+                                             "Fullname":"Laxman",
+                                             "Password":"laxman"
+                                           },
+                        "mockResponseNegative":
+                                            {
+                                             "response":"already exist"
+                                           }
+
+    }
+}

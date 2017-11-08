@@ -1,0 +1,167 @@
+
+
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+	<!-- Navigation-->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top main" id="mainNav">
+
+	<img src="../../assets/logo.png" alt="img src" style="width: 50px" style="height: 40px">
+
+		<a class="navbar-brand">GlibApp</a>
+
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+
+
+			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+<a class="nav-link"> <!-- here -->
+<!-- <div class="profile-userpic" > -->
+
+<div class="row">
+<div class="col-md-3">
+<img id="profilePhoto" *ngIf="profilePhoto" src="http://localhost:4000/profile_picture/{{profilePhoto}}"  class="img-responsive profile-userpic rounded" style="width: 50px" alt="Picture Not Set">
+<div *ngIf="!profilePhoto">
+<avatar class="direct-chat-img"  [name]="username" [background]="'purple'" [size]="50" [displayType]="'circle'"></avatar>
+</div>
+</div>
+
+<div class="col-md-9">
+<h3 class="nav-link-text" [routerLink]="'/dashboard/accountSettings'" > <strong>{{username}}</strong></h3>
+</div>
+</div>
+</a>
+<li class="nav-item" data-toggle="tooltip" data-placement="right" title="public">
+
+<a class="nav-link"  routerLink="/dashboard/general">      
+<i class="fa fa-users" aria-hidden="true"></i>
+       
+<span class="nav-link-text" >General</span>
+
+</a>
+</li>
+<li class="nav-item" data-toggle="tooltip" data-placement="right" title="private">
+
+	<a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+		<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+
+		<span class="nav-link-text">Channels</span>
+	</a>
+	<ul class="sidenav-second-level collapse" id="collapseComponents">
+		<li>
+
+			<a class="nav-link"><i class="fa fa-television" aria-hidden="true"></i>
+
+				JAVA</a>
+			</li>
+			<li>
+				<a class="nav-link"><i class="fa fa-television" aria-hidden="true"></i>
+
+					C++</a>
+				</li>
+				<li>
+					<a class="nav-link"><i class="fa fa-television" aria-hidden="true"></i>
+						Javascript</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Online">
+<a class="nav-link"> <!-- routerLink="/dashboard"
+-->            <!-- <i class=" fa fa-fw fa-dashboard"></i> -->
+<span class="nav-link-text" ><i class="fa fa-user" aria-hidden="true"></i> online users</span>
+</a>
+</li>
+<li *ngFor="let user of chatListUsers" 
+(click)="selectedUser(user)" 
+						[class.selected-user]="isUserSelected(user._id)"
+						>
+
+	<a class="nav-link">
+	<div class="row">
+	<div class="col-md-2"> 
+	<i class="fa fa-circle" aria-hidden="true" id=fontAw></i>
+	</div>
+	<div class="col-md-8">
+	 {{ user.username}}
+	</div> 
+
+	
+		<div class="col-md-1" *ngIf="reciever.includes(user._id)">
+	<span class="badge badge-danger" *ngIf="flagArray[reciever.indexOf(user._id)]">{{flagArray[reciever.indexOf(user._id)]}}</span>  
+</div>
+
+	</div>
+
+</a> 
+
+</li>
+
+			<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Offline">
+
+<a class="nav-link"> <!-- routerLink="/dashboard"
+-->
+
+<i class="fa fa-user-times" aria-hidden="true"></i>
+
+<span class="nav-link-text" >Offline users</span>
+</a>
+</li>
+
+<li *ngFor="let user of offlineUsers" 
+
+						>
+	<a class="nav-link">
+	<div class="row">
+	<div class="col-md-2">
+	<i class="fa fa-circle-thin" aria-hidden="true"></i>
+	</div>
+	<div class="col-md-8"(click)="selectOfflineUsers(user)">
+	{{ user.username}}  
+	</div>
+	<div class="col-md-1" *ngIf="reciever.includes(user._id)">
+	<span class="badge badge-danger" *ngIf="flagArray[reciever.indexOf(user._id)]">{{flagArray[reciever.indexOf(user._id)]}}</span>   
+	</div>
+	</div>
+	</a>
+
+	 
+</li>
+
+			<li class="nav-item" data-toggle="tooltip" data-placement="right" title="logout">
+
+
+<a class="nav-link"> <!-- routerLink="/dashboard"
+-->         	<i class="fa fa-sign-out" aria-hidden="true"></i>
+<span class="nav-link-text" (click)="logout()" >Sign Out</span>
+</a>
+</li>
+
+</ul>
+
+</div>
+</nav>
+
+
+<div class="content-wrapper">
+	<a class="scroll-to-top rounded" href="#page-top">
+		<i class="fa fa-angle-up"></i>
+	</a>
+
+	<div *ngIf="isSocketConnected">
+	<router-outlet></router-outlet>
+	</div>
+
+	<script src="vendor/popper/popper.min.js"></script>  
+</div>
+
+</body>
+
+
+
+
+
+
+

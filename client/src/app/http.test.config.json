@@ -1,0 +1,82 @@
+{
+	"data": {
+		"Username":"Prerna"
+	},
+	"mockResponse":{
+		"Username": "Prerna"
+	},
+	"mockResponseNegative":{
+		"Username": "Prerna Thanai"
+	},
+	"loginData":{
+		"Username": "Prerna",
+		"Password": "12345"
+	},
+	"loginMockResponse":{
+		"Username": "Prerna",
+		"Password": "12345"
+	},
+	"loginMockResponseNegativeU":{
+		"Username": "Prerna Thanai",
+		"Password": "12345"
+	},
+	"loginMockResponseNegativeP":{
+		"Username": "Prerna",
+		"Password": "123"
+	},
+	"registerData":{
+		"Email" : "prerna@gmail.com",
+		"Username": "Prerna",
+		"Password": "12345"	
+	},
+	"registerUserMockResponse":{
+		"Email" : "prerna@gmail.com",
+		"Username": "Prerna",
+		"Password": "12345"	
+	},
+	"registerUserMockResponseNegative":{
+		"Email" : "prerna@gmail.com",
+		"Username": "Prerna Thanai",
+		"Password": "12345"	
+	},
+	"registerUserMockResponseNegativeE":{
+		"Email" : "prernathanai@gmail.com",
+		"Username": "Prerna Thanai",
+		"Password": "12345"	
+	},
+	"dataId": {
+		"UserId":"59fae35e0933a514d267b28a"
+	},
+	"mockResponseId": {
+		"UserId":"59fae35e0933a514d267b28a"
+	},
+	"mockResponseNegativeId": {
+		"UserId":"59fae35e0933a514d267b28b"
+	},
+	"messageData": {
+		"userId":"59fae35e0933a514d267b28a",
+		"toUserId":"69fae35e0933a514d267b28a"		
+	},
+	"messageMockResponse": {
+		"userId":"59fae35e0933a514d267b28a",
+		"toUserId":"69fae35e0933a514d267b28a"		
+	},
+	"messageMockResponseNegative": {
+		"userId":"59fae35e0933a514d267b28a",
+		"toUserId":"69fae35e0933a514d267b28b"		
+	},
+	"messageMockResponseNegativeAll": {
+		"userId":"59fae35e0933a514d267b28b",
+		"toUserId":"69fae35e0933a514d267b28b"		
+	},
+	"scrapingData":{
+		"url":"https://iniitian.niit-tech.com/ntless/"
+	},
+	"scrapingMockResponse":{
+		"url":"https://iniitian.niit-tech.com/ntless/"
+	},
+	"scrapingMockResponseNegative":{
+		"url":"https://iniitian.niittech.com/ntless/"
+	}
+
+}

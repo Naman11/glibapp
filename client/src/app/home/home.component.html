@@ -1,0 +1,182 @@
+
+<!-- Loading overlay section starts -->
+<div [class.overlay-display]="overlayDisplay" class="overlay">
+	<h1>Loading</h1>
+</div>
+<!-- Loading overlay section starts -->
+
+<div class="home">
+
+	<!-- header section starts -->
+	<div class="header">
+		<div class="welcome-user">
+			<span>Hello {{username}}</span>
+			<div class="home-navigation">
+				<ul>
+					<li (click)="logout()" >Logout</li>
+				</ul>
+			</div>
+		</div>		
+	</div>
+	<!-- header section ends -->
+
+	<div class="row chat-body">
+
+		<!-- Messages section starts -->
+		<div class="col-md-8">
+			<div class="massege-wrapper">
+				<div class="massege-container">
+
+					<div *ngIf="selectedUserName" 
+						class="opposite-user">
+						Chatting with {{selectedUserName}}
+					</div>
+<!-- 
+					<ul class="message-thread">
+
+						<li *ngFor="let message of messages"
+							[class.align-right]="alignMessage(message.toUserId)"
+							>
+								{{ message.message}}
+						</li>
+					</ul> -->
+					
+				</div>
+			<!-- 	<div class="message-typer">
+					<textarea 
+						class="message form-control" 
+						placeholder="Type and hit Enter"
+						[(ngModel)]="message" 
+						(keyup)="sendMessage($event)"
+					></textarea>
+					<button class="btn btn-success no-rounded" type="button" (click)="sendMessageButton()">Send</button>
+				</div> -->
+			</div>
+		</div>
+
+
+
+
+
+
+<div class="container bootstrap snippet">
+    <div class="row">
+
+  	
+
+
+
+		<!-- Messages section ends -->
+
+		<!-- User chat list section starts -->
+		<!-- <div class="col-md-4">
+			<div class="user-list-wrapper">
+				<ul class="user-list">
+				
+					
+					<li *ngFor="let user of chatListUsers"
+						(click)="selectedUser(user)" 
+						[class.selected-user]="isUserSelected(user._id)"
+						>
+							{{ user.username}}
+					</li>
+				</ul>
+			</div>
+		</div> -->
+
+
+
+
+
+
+		<div class="col-md-4 bg-white ">
+            <div class=" row border-bottom padding-sm" style="height: 40px;">
+            	Online Users
+            </div>
+            
+            <!-- =============================================================== -->
+            <!-- member list -->
+            <ul class="friend-list">
+                <li class="active bounceInDown" *ngFor="let user of chatListUsers" (click)="selectedUser(user)" 
+						[class.selected-user]="isUserSelected(user._id)">
+            
+                		
+                		<div class="friend-name">	
+                			<strong id="cursor">{{ user.username}}</strong>
+                		</div>
+                		<div class="last-message text-muted">Hello, Are you there?</div>
+                		<small class="time text-muted">Just now</small>
+                		<small class="chat-alert label label-danger">1</small>
+              
+                </li>
+                  
+            </ul>
+		</div>
+		<!-- User chat list section ends -->
+<div class="col-md-8 bg-white ">
+            <div class="chat-message">
+                <ul class="chat message-thread">
+                    <li class="left clearfix" *ngFor="let message of messages"
+							[class.align-right]="alignMessage(message.toUserId)">
+                    	<span class="chat-img pull-left">
+                    		<img src="https://bootdey.com/img/Content/user_3.jpg" alt="User Avatar">
+                    	</span>
+                    	<div class="chat-body clearfix">
+                    		<div class="header" >
+                    			<strong class="primary-font">{{message.toUserId}}</strong>
+                    			<small class="pull-right text-muted" *ngIf="!editflag"><i class="fa fa-clock-o"></i>{{message.timestamp}}</small>
+                    			<small class="pull-right text-muted"*ngIf="editflag"><i class="fa fa-clock-o"></i>Just Now</small>
+                    		</div>
+                    		<p>
+                    			{{ message.message}}
+                    		</p>
+                    	</div>
+                    </li>
+                    <!-- <li class="right clearfix">
+                    	<span class="chat-img pull-right">
+                    		<img src="https://bootdey.com/img/Content/user_1.jpg" alt="User Avatar">
+                    	</span>
+                    	<div class="chat-body clearfix">
+                    		<div class="header">
+                    			<strong class="primary-font">Sarah</strong>
+                    			<small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 13 mins ago</small>
+                    		</div>
+                    		<p>
+                    			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at. 
+                    		</p>
+                    	</div>
+                    </li>     -->     
+                </ul>
+            </div>
+
+
+
+	<!-- <div class="message-typer">
+					<textarea 
+						class="message form-control" 
+						placeholder="Type and hit Enter"
+						[(ngModel)]="message" 
+						(keyup)="sendMessage($event)"
+					></textarea>
+					<button class="btn btn-success no-rounded" type="button" (click)="sendMessageButton()">Send</button>
+				</div> -->
+
+
+
+            <div class="chat-box bg-white">
+            	<div class="input-group">
+            		<input class="form-control border no-shadow no-rounded" placeholder="Type your message here" [(ngModel)]="message" 
+						(keyup)="sendMessage($event)">
+            		<span class="input-group-btn">
+            		<button class="btn btn-success no-rounded" type="button" (click)="sendMessageButton()">Send</button>
+            		</span>
+            	</div><!-- /input-group -->	
+            </div>            
+		</div>
+
+
+	</div>
+
+</div>
+</div>
+</div>

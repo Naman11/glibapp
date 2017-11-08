@@ -1,0 +1,326 @@
+{
+	"codeData":{
+		"username":"prerna",
+       "code":{
+      "codeId":"75343893", 
+       "code":"#include<iostream.h>",
+       "language":"C",
+       "title":"C code"
+   }
+	},
+	"codeDataNegative":{
+		"username":"prerna",
+       "code":{
+      "codeId":"75343890", 
+       "code":"#include<iostream.h>",
+       "language":"C",
+       "title":"C code"
+   }
+	},
+	"codeDataNegativeAll":{
+		"username":"prerna",
+       "code":{
+      "codeId":"75343890", 
+       "code":"#include<conio.h>",
+       "language":"C",
+       "title":"C code"
+   }
+	},
+	"codeMockResponse":{
+		"ok":"1",
+		"n":"1"
+	},
+	"codeMockResponseNegative":{
+		"ok":"1",
+		"n":"0"	
+	},
+	"codeMockResponseNegativeAll":{
+		"ok":"0",
+		"n":"0"	
+	},
+	"downloadCodeData":[
+    {
+        "_id": "59fda89a6852521cefe7f907",
+        "username": "prerna",
+        "timestamp": 1509795994915,
+        "code": {
+            "codeId": 75343893,
+            "title": "C code",
+            "code": "#include<iostream.h",
+            "comment": null,
+            "language": "C",
+            "username": "prerna"
+        }
+    }
+],
+	"downloadCodeDataNegativeAll":[
+    {
+        "_id": "59fda89a6852521cefe7f907",
+        "username": "prerna thanai",
+        "timestamp": 1509795994915,
+        "code": {
+            "codeId": 75343890,
+            "title": "C code",
+            "code": "#include<conio.h",
+            "comment": null,
+            "language": "C",
+            "username": "prerna thanai"
+        }
+    }
+],
+	"downloadCodeDataNegative":[
+    {
+        "_id": "59fda89a6852521cefe7f907",
+        "username": "prerna thanai",
+        "timestamp": 1509795994915,
+        "code": {
+            "codeId": 75343890,
+            "title": "C code",
+            "code": "#include<iostream.h",
+            "comment": null,
+            "language": "C",
+            "username": "prerna thanai"
+        }
+    }
+],
+    "codeId":{
+    	"codeId":75343893
+    },
+    "getMessageData":{
+    	"_id" : "59fbfaac6ed52b10cf36cf0a",
+	"username" : "prerna",
+	"timestamp" : 1509685932516,
+	"message" : {
+		"message" : "hiiiii"
+	}
+
+    },
+
+"messageData":{
+    "ok":1,
+    "n":1
+  },
+  "codeDataL":{
+      "_id": "59fda89a6852521cefe7f907",
+      "username": "lakshay",
+      "timestamp": 1509795994915,
+      "code": {
+            "codeId": 91767746,
+            "title": "swad",
+            "code": "aqqqqqqqqqqqqqqq",
+            "comment": null,
+            "language": "C",
+            "username": "lakshay"
+        }
+  },
+  "messageMockResponse":{
+    "ok":1,
+    "n":1
+  },
+  "messageMockResponseNegative":{
+    "ok":1,
+    "n":0
+  },
+    "messageMockResponseNegativeBoth":{
+    "ok":0,
+    "n":0
+  },
+  "getCodeByIdResponse":{
+        "_id": "59fda89a6852521cefe7f907",
+        "username": "lakshay",
+        "timestamp": 1509795994915,
+        "code": {
+            "codeId": 91767746,
+            "title": "swad",
+            "code": "aqqqqqqqqqqqqqqq",
+            "comment": null,
+            "language": "C",
+            "username": "lakshay"
+        }
+    },
+
+   "getCodeByIdResponseNotEqual":{
+        "_id": "59fda89a685252fe7f907",
+        "username": "lakay",
+        "timestamp": 15097994915,
+        "code": {
+            "codeId": 917746,
+            "title": "swad",
+            "code": "aqqqqqqqqqqqqqqq",
+            "comment": null,
+            "language": "C",
+            "username": "lakshay"
+        }
+    },
+    "getCodeByIdResponseSome":{
+        "_id": "59fda89a685252efe7f907",
+        "username": "lakshay",
+        "timestamp": 15097994915,
+        "code": {
+            "codeId": 91767746,
+            "title": "swad",
+            "code": "aqqqqqqqqqqqqqqq",
+            "comment": null,
+            "language": "C",
+            "username": "lakshay"
+        }
+    },
+    "retrieveMessageData":{
+        "_id": "59fc41c889c0937c2d1cb628",
+        "username": "lakshay",
+        "timestamp": 1509704136879,
+        "message": {
+            "message": "lakshay"
+        }
+    },
+    "retrieveMessageResponse":{
+        "_id": "59fc41c889c0937c2d1cb628",
+        "username": "lakshay",
+        "timestamp": 1509704136879,
+        "message": {
+            "message": "lakshay"
+        }
+    },
+    "retrieveMessageResponseNotEqual":{
+        "_id": "59fc41c889c37c2d1cb628",
+        "username": "lakay",
+        "timestamp": 15004136879,
+        "message": {
+            "message": "laksh"
+        }
+    },
+    "retrieveMessageResponseSome":{
+        "_id": "59fc41c837c2d1cb628",
+        "username": "lakshay",
+        "timestamp": 1509704136879,
+        "message": {
+            "message": "lahay"
+        }
+    }, 
+    "randomVariable":{
+      "username":"Lakshay",
+      "message":"Hi",
+      "codeId":91767746
+    },
+"saveMessageData": {
+ "n":1,
+ "ok":1 
+},
+"saveMessageMockResponse": {
+ "n":1,
+ "ok":1 
+},
+"saveMessageMockResponseNegative": {
+ "n":0,
+ "ok":1 
+},
+"saveMessageMockResponseNegativeAll": {
+ "n":0,
+ "ok":0 
+},
+  "sendCodeData":{
+        "n":1,
+        "ok":1
+    },
+    "sendCodeDataNotSame":{
+        "n":1,
+        "ok":1
+    },
+    "codeDataNotSame":{
+        "n":1,
+        "ok":0
+    },
+    "sendCodeDataNotEqual":{
+        "n":1,
+        "ok":1
+    },
+    "CodeDataNotEqual":{
+        "n":0,
+        "ok":0
+    },
+    "getCodeDataSocketComponent":{
+        "codeId" : 50087596,
+        "title" : "tusdfskjd",
+        "code" : "safasfas",
+        "comment" : "asfas",
+        "language" : "Javascript",
+        "username" : "lakshay"
+    },
+    "getCodeDataSocket":{
+        "codeId" : 50087596,
+        "title" : "tusdfskjd",
+        "code" : "safasfas",
+        "comment" : "asfas",
+        "language" : "Javascript",
+        "username" : "lakshay"
+    },
+    "messageDataComponent":[
+    {
+        "_id": "59fda89a6852521cefe7f907",
+        "username": "prerna",
+        "timestamp": 1509795994915,
+        "message": {
+            "message": "laksh"
+        }
+    }
+    ],
+    "messageDataComponentNotSame":[
+    {
+        "_id": "59fda89a6852efe7f907",
+        "username": "prna",
+        "timestamp": 1509994915,
+        "message": {
+            "message": "lash"
+        }
+    }
+    ],
+  "messageDataComponentSome":[
+    {
+        "_id": "59fda89a6852521cefe7f907",
+        "username": "prea",
+        "timestamp": 1509795994915,
+        "message": {
+            "message": "lsh"
+        }
+    }
+    ],
+  "retrieveMessageData":{
+        "_id": "59fc41c889c0937c2d1cb628",
+        "username": "lakshay",
+        "timestamp": 1509704136879,
+        "message": {
+            "message": "lakshay"
+        }
+    },
+    "retrieveMessageResponse":{
+        "_id": "59fc41c889c0937c2d1cb628",
+        "username": "lakshay",
+        "timestamp": 1509704136879,
+        "message": {
+            "message": "lakshay"
+        }
+    },
+    "retrieveMessageResponseNotEqual":{
+        "_id": "59fc41c889c37c2d1cb628",
+        "username": "lakay",
+        "timestamp": 15004136879,
+        "message": {
+            "message": "laksh"
+        }
+    },
+    "retrieveMessageResponseSome":{
+        "_id": "59fc41c837c2d1cb628",
+        "username": "lakshay",
+        "timestamp": 1509704136879,
+        "message": {
+            "message": "lahay"
+        }
+    }, 
+    "randomVariable":{
+      "username":"Lakshay",
+      "message":"Hi",
+      "codeId":91767746
+    }
+
+
+}

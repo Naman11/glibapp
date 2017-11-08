@@ -1,0 +1,12 @@
+{
+     "data" : 
+     {"Fullname":"Rekha Sharma",
+    "Email":"rkha@gmail.com",
+    "Password":"pass",
+    "ConfirmPassword":"pass",
+    "Contact":"9999999999" }
+    ,
+    "message" : {"message":true}
+
+
+  }

@@ -1,0 +1,63 @@
+
+ <div class="container-fluid" id="second">
+ <div class="container-fluid" id="first">
+ <div class="row" >
+
+ <img src="../../assets/logo.png" alt="img src" style="width: 50px" style="height: 50px">
+
+    <a class="navbar-brand" id="app">GlibApp</a>
+
+ </div>
+ </div>
+ <div class="container-fluid" id="third">
+<div id="login">
+   
+   <!--    <div class="row"> -->
+          <div class="col-xs-12">
+              <!-- <div class="form-wrap"> -->
+                  <h1 id="h1">Log in with your User Name</h1>
+                    <form (ngSubmit)="save(f.value, f.valid)" #f="ngForm" role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+
+                        <div class="form-group">
+                            <label for="email" class="sr-only" id="l1">Email</label>
+                            <input type="email" name="fullname" id="e1" class="form-control" placeholder="Username"   [(ngModel)]="username" 
+                           required
+                           pattern="[a-zA-Z][a-zA-Z ]+"
+                           #name="ngModel">
+                        </div>
+                        <div [hidden]="name.valid || (name.pristine && !f.submitted)"
+                          class="alert alert-danger">
+                          <div [hidden]="!name.hasError('required')">Fullname is required</div>
+                          <div [hidden]="!name.hasError('pattern')">Only alphabets are allowed</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="key" class="sr-only" id="pass">Password</label>
+                            <input type="password" name="key" id="key" class="form-control" placeholder="Password"
+                            [(ngModel)]="password"
+                            required
+                            minlength="5"
+                            #upassword="ngModel" >
+                        </div>
+                         <div [hidden]="upassword.valid || (upassword.pristine && !f.submitted)"
+                          class="alert alert-danger">
+                            <div [hidden]="!upassword.hasError('required')">Password is required</div>
+                            <div [hidden]="!upassword.hasError('minlength')">Password should have atleat 5 characters</div>
+                         </div>
+
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" 
+                        (click)="login()" value="Log in">
+                    </form>
+                    <a  [routerLink]="'/forgetPass'">Forgot your password?</a>
+                    <hr>
+              <!-- </div> -->
+        </div> <!-- /.col-xs-12 -->
+   <!--    </div> --> <!-- /.row -->
+    <!-- /.container -->
+</div>
+
+
+ </div>
+ </div>
+
+ 

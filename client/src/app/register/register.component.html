@@ -1,0 +1,89 @@
+<div class="container-fluid" id="second">
+<div class="container-fluid" id="first">
+<div class="row" >
+</div>
+</div>
+<div class="container-fluid" id="third">
+<div id="login">
+ 
+  <!--    <div class="row"> -->
+         <div class="col-xs-12">
+             <!-- <div class="form-wrap"> -->
+               <h1 id="h1">Log in with your User Name</h1>
+                   <form role="form" (ngSubmit)="save(f.value, f.valid)" #f="ngForm" action="javascript:;" method="post" id="login-form" autocomplete="off">
+
+                       <div class="form-group">
+                           <label for="email" id="uname" class="sr-only">User Name</label>
+                           <input type="text"  id="username" class="form-control" placeholder="Username"   [(ngModel)]="username" 
+                           required
+                           pattern="[a-zA-Z][a-zA-Z ]+"
+                           name="fullname"  
+                           #name="ngModel">
+                       </div> 
+                      <div [hidden]="name.valid || (name.pristine && !f.submitted)"
+                        class="alert alert-danger">
+                        <div [hidden]="!name.hasError('required')">{{word.required}}</div>
+                        <div [hidden]="!name.hasError('pattern')">{{word.pattern}}</div>
+                      </div>
+
+
+                        <div class="form-group">
+                           <label for="email" id="etext" class="sr-only">Email</label>
+                           <input type="email" name="email" id="email" class="form-control" placeholder="abc@gmail.com"   
+                           [(ngModel)]="email"
+                           required
+                           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+                           #uemail="ngModel">
+                       </div>
+                       <div [hidden]="uemail.valid || (uemail.pristine && !f.submitted)"
+                        class="alert alert-danger">
+                        <div [hidden]="!uemail.hasError('required')">Email is required</div>
+                        <div [hidden]="!uemail.hasError('pattern')"> Email is required and format should be <i>john@doe.com</i></div>
+                       </div>
+
+
+                        <div class="form-group">
+                           <label for="email" id="passtext" class="sr-only">Password</label>
+                           <input type="password" id="password" name="password"  class="form-control" placeholder="Password"   [(ngModel)]="password"
+                           required
+                           minlength="5"
+                           #upassword="ngModel">
+                       </div>
+                       <div [hidden]="upassword.valid || (upassword.pristine && !f.submitted)"
+                        class="alert alert-danger">
+                          <div [hidden]="!upassword.hasError('required')">Password is required</div>
+                          <div [hidden]="!upassword.hasError('minlength')">Password should have atleat 5 characters</div>
+                       </div>
+                     
+                        <div class="form-group">
+                           <label for="email" id="ctext" class="sr-only">ConfirmPassword</label>
+                           <input type="password" name="cpass" id="cpass" class="form-control" placeholder="Confirm Password"   [(ngModel)]="cpass"
+                           required
+                           validateEqual="password"
+                           #ucpass="ngModel">
+                       </div>
+                      <div [hidden]="ucpass.valid || (ucpass.pristine && !f.submitted)"
+                      class="alert alert-danger">
+                      Password did not matched
+                      </div>
+
+                       <div class="form-group">
+                           <label for="key" id="dob" class="sr-only">DOB</label>
+                           <input type="date" name="key" id="key" class="form-control" placeholder="DOB"
+                              max={{now}}
+                             [(ngModel)]="date" >
+                       </div>
+
+
+                       <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block"
+                      (click)="registerUser()" value="Register">
+                   </form>
+         
+                   <hr>
+             
+       </div> 
+</div>
+
+
+</div>
+</div>

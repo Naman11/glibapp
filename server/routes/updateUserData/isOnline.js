@@ -13,13 +13,13 @@ module.exports = (request,response)=>{
 	           		if (error || result === null) {
 
 	           			isOnlineResponse.error = true;
-	            		isOnlineResponse.message = `Server error.`;
+	            		isOnlineResponse.message = "Server error.";
 	           			response.status(404).json(isOnlineResponse);
 	           		}else{
 	           			//console.log(result)
 	           			isOnlineResponse.error = false;
 	           			isOnlineResponse.userId = result;
-	            		isOnlineResponse.message = `User is now Online`;
+	            		isOnlineResponse.message = "User is now Online";
 	           			response.status(200).json(isOnlineResponse);
 	           		}
 				});

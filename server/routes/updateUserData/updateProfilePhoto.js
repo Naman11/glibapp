@@ -52,7 +52,7 @@ module.exports = (request,response)=>{
         response.json({error_code:1,err_desc:err, message: "Error encountered"});
       }
       console.log("THSI", response.req.file)
-     let updateProfilePhotoResponse = {}
+     let updateProfilePhotoResponse = {};
     
     let data ={$set:{"profilePhoto":response.req.file.filename}}
     let params = {"id": response.req.params.id}

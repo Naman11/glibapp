@@ -84,22 +84,6 @@ module.exports = (request,response)=>{
 
 })  
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
 }catch(error){
   response.json({status:false, message: "Server Error",data: error })
 }

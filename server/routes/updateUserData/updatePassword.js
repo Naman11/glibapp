@@ -4,8 +4,7 @@ const helper = require('../../utils/helper');
 
 module.exports = (request,response)=>{
 	try{
-		console.log("hkjdsaZ")
-		console.log(request.body)
+		
 			let updatePasswordResponse = {}
 		let data ={$set:{"password":request.body.newPassword}}
 		let params = {"id": request.body.id, "oldPassword":request.body.oldPassword}

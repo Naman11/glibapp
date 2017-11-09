@@ -17,7 +17,7 @@ try{
 	           			
 	           			getUserInfoResponse.error = false;
 	           			getUserInfoResponse.result = result;
-	            		getUserInfoResponse.message = `Query Complete`;
+	            		getUserInfoResponse.message = "Query Complete";
 	           			response.status(200).json(getUserInfoResponse);
 	           		}
 				});

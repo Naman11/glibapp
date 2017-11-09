@@ -1,7 +1,7 @@
 const helper = require('../../utils/helper');
 module.exports= function (request, response) {
 
-        console.log("This is addgeneralchat serverside",request.body);
+        //console.log("This is addgeneralchat serverside",request.body);
         var data={
             "username":request.body.username,
             "timestamp":Date.now()

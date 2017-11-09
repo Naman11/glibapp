@@ -14,13 +14,13 @@ module.exports = (request,response)=>{
 	           		if (error || result === null) {
 
 	           			updateContactResponse.error = true;
-	            		updateContactResponse.message = `Server error.`;
+	            		updateContactResponse.message = "Server error.";
 	           			response.status(404).json(updateContactResponse);
 	           		}else{
 	           			//console.log(result)
 	           			updateContactResponse.error = false;
 	           			updateContactResponse.userId = result;
-	            		updateContactResponse.message = `User Contact Updated`;
+	            		updateContactResponse.message = "User Contact Updated";
 	           			response.status(200).json(updateContactResponse);
 	           		}
 				});

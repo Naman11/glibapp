@@ -1,0 +1,113 @@
+{
+	"chatMockResponse":{
+			"error":false,
+			"message":"Query Complete",
+			"result":{
+				"email":"jlakshay1095@gmail.com",
+				"online":"Y",
+				"password":"12345",
+				"reciever":[
+					{
+						"flag":0,
+						"fromId":"5a01478ce5d7b8702d45ced0"
+					}
+				],
+				"socketId":"fbRhrQ3QdCD98zZ3AADg",
+				"timestamp":1510033232,
+				"username":"lakshay",
+				"_id":"5a014750e5d7b8702d45cece"
+			}
+	},
+	"randomVariables":{
+		"id":"5a014750e5d7b8702d45cece",
+		"formData":"img/png",
+		"fromId":"5a01478ce5d7b8702d45ced0",
+		"toId":"5a014750e5d7b8702d45cece"
+	},
+	"chatMockResponseNotSame":{
+			"error":false,
+			"message":"Query Coete",
+			"result":{
+				"email":"jlakshay10mail.com",
+				"online":"Y",
+				"password":"12345",
+				"reciever":[
+					{
+						"flag":0,
+						"fromId":"5a01478ce5d7b8702d45ced0"
+					}
+				],
+				"socketId":"fbRhrQ3QdCD98zZ3AADg",
+				"timestamp":1510033232,
+				"username":"lakshay",
+				"_id":"5a014750e5d7b8702d45cece"
+			}
+	},
+	"chatMockResponseNotEqual":{
+			"error":false,
+			"message":"Queryete",
+			"result":{
+				"email":"jlakshay10ail.com",
+				"online":"Y",
+				"password":"12345",
+				"reciever":[
+					{
+						"flag":0,
+						"fromId":"5a01478d45ced0"
+					}
+				],
+				"socketId":"fbRhrQ3QdCD98zZ3AADg",
+				"timestamp":1510033232,
+				"username":"lakshay",
+				"_id":"5a014750e5d7b8702d45cece"
+			}
+	},
+	"uploadResponse":{
+			"error":false,
+			"message":"File Uploaded to  Messages Collection",
+			"response":{
+					"finalData":{
+						"file":{
+							"fileMIME":"text/plain",
+							"filePath":"file-5a01478ce5d7b8702d45ced0-1510137269533.txt"
+						},
+						"fromUserId":"5a01478ce5d7b8702d45ced0",
+						"timestamp":1510137269534,
+						"toUserId":"5a014750e5d7b8702d45cece"
+					}
+			}
+	},
+		"uploadResponseNotSame":{
+			"error":false,
+			"message":"File Uploaded ction",
+			"response":{
+					"finalData":{
+						"file":{
+							"fileMIME":"img/jpg",
+							"filePath":"file-5a01478ce5d7b8702d45ced0-1510137269533.txt"
+						},
+						"fromUserId":"5a01478ce5d7b8702d45ced0",
+						"timestamp":1510137269534,
+						"toUserId":"5a014750e5d7b8702d45cece"
+					}
+			}
+	},
+	"uploadResponseNotEqual":{
+			"error":false,
+			"message":"File Uploaded tion",
+			"response":{
+					"finalData":{
+						"file":{
+							"fileMIME":"texin",
+							"filePath":"file-5a01478ce5d7b8702d45ced0-1510137269533.txt"
+						},
+						"fromUserId":"5a01478ce5d5ced0",
+						"timestamp":1510137269534,
+						"toUserId":"5a014750e5d7b8702d45cece"
+					}
+			}
+	}
+
+}
+
+

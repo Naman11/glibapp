@@ -9,14 +9,12 @@
 
 		constructor(private http:Http,private fetchUsrInfo:GetInfoService, private fTService:FileTransferGlobalService ) { }
 		getProfilePhoto(id:string):Observable<any> {
-
 			return this.fetchUsrInfo.fetchInfo(id)
 			.map((res)=>{
 				return res})
 		}
 		/*=======================================upload file=============================*/
 		uploadFile(formData : FormData, fromId : any, toId : any): Observable<any> {
-			console.log("in chats service upload@@@@@");
 			return this.fTService.sendFileOneOne(formData,fromId, toId).map((res)=>{return res});
 		}
 	}

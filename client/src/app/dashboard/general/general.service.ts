@@ -5,6 +5,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import * as io from 'socket.io-client';
 import { FileTransferGlobalService} from '../../shared/file-transfer-global.service';
+import generalUrl from './config/url';
 
 @Injectable()
 export class GeneralService {
@@ -26,8 +27,7 @@ export class GeneralService {
   	"message":message
   }
   console.log("This is service method general.service OBJ->>",obj);
-	const url="http://localhost:4000/generalChats";
-  //const url="http://192.168.252.186:4000/generalChats";
+	const url=generalUrl.saveMessage;
     return this.http
     .post(url,obj) //calling the http function
     .map((res)=>res.json());
@@ -35,7 +35,7 @@ export class GeneralService {
    }
 
 saveCode(data){
-const url="http://localhost:4000/generalChats";
+const url=generalUrl.saveCode;
 //const url="http://192.168.252.186:4000/generalChats";
     return this.http
     .post(url,data) //calling the http function
@@ -44,34 +44,31 @@ const url="http://localhost:4000/generalChats";
 
 
 getCodeDatas():Observable<any>{
-     const url="http://localhost:4000/generalChats";
+     const url=generalUrl.getCodeDatas;
      //const url="http://192.168.252.186:4000/generalChats";
     return this.http
     .get(url) //calling the http function
     .map((res)=>{
-console.log("this is general response",res)
-      return res.json()});
+     return res.json()});
    }
 
 getCodeDatasById(codeId){
        // let codeId=33164587;
-      const url="http://localhost:4000/generalChats/Id/"+codeId;
+      const url=generalUrl.getCodeDatasById+codeId;
       //const url="http://192.168.252.186:4000/generalChats/Id/"+codeId;
       return this.http
       .get(url) //calling the http function
       .map((res)=>{
-      console.log("this is general response",res)
       return res.json()});
     
     }
 
    retrieveMessage():Observable<any>{
-   	const url="http://localhost:4000/generalChats";
+   	const url=generalUrl.retrieveMessage;
     //const url="http://192.168.252.186:4000/generalChats";
     return this.http
     .get(url) //calling the http function
     .map((res)=>{
-console.log("this is general response",res)
-    	return res.json()});
+    return res.json()});
    }
 	}

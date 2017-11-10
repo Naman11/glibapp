@@ -5,7 +5,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import * as io from 'socket.io-client';
 import { FileTransferGlobalService} from '../../shared/file-transfer-global.service';
-import generalUrl from './config/url';
+import expressUrls from '../../config/url';
 
 @Injectable()
 export class GeneralService {
@@ -27,7 +27,7 @@ export class GeneralService {
   	"message":message
   }
   console.log("This is service method general.service OBJ->>",obj);
-	const url=generalUrl.saveMessage;
+	const url=expressUrls.saveMessage;
     return this.http
     .post(url,obj) //calling the http function
     .map((res)=>res.json());
@@ -35,7 +35,7 @@ export class GeneralService {
    }
 
 saveCode(data){
-const url=generalUrl.saveCode;
+const url=expressUrls.saveCode;
 //const url="http://192.168.252.186:4000/generalChats";
     return this.http
     .post(url,data) //calling the http function
@@ -44,7 +44,7 @@ const url=generalUrl.saveCode;
 
 
 getCodeDatas():Observable<any>{
-     const url=generalUrl.getCodeDatas;
+     const url=expressUrls.getCodeDatas;
      //const url="http://192.168.252.186:4000/generalChats";
     return this.http
     .get(url) //calling the http function
@@ -54,7 +54,7 @@ getCodeDatas():Observable<any>{
 
 getCodeDatasById(codeId){
        // let codeId=33164587;
-      const url=generalUrl.getCodeDatasById+codeId;
+      const url=expressUrls.getCodeDatasById+codeId;
       //const url="http://192.168.252.186:4000/generalChats/Id/"+codeId;
       return this.http
       .get(url) //calling the http function
@@ -64,7 +64,7 @@ getCodeDatasById(codeId){
     }
 
    retrieveMessage():Observable<any>{
-   	const url=generalUrl.retrieveMessage;
+   	const url=expressUrls.retrieveMessage;
     //const url="http://192.168.252.186:4000/generalChats";
     return this.http
     .get(url) //calling the http function

@@ -14,6 +14,11 @@ export default{
 	"reset":localhost+'/reset',
 	"forget":localhost+'/forgotPass/',
 	"login":localhost+'/login',
-	"upload":localhost+'/upload/'
+	"upload":localhost+'/upload/',
+	"saveMessage":localhost+'/generalChats',
+	"saveCode":localhost+'/generalChats',
+	"getCodeDatas":localhost+'/generalChats',      
+	"getCodeDatasById":localhost+'/generalChats/Id/',
+	"retrieveMessage":localhost+'/generalChats'
 	
 }
